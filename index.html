@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Digital Vault — Claves y Gift Cards Oficiales</title>
+  <meta name="description" content="Tienda profesional de claves digitales, tarjetas regalo y suscripciones legales. Pagos seguros, entrega instantánea." />
+  <meta name="author" content="Digital Vault" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%2300455b'/%3E%3Ctext x='50' y='60' font-size='46' text-anchor='middle' fill='white' font-family='Arial'%3EÐ%3C/text%3E%3C/svg%3E">
+
+  <style>
+    :root{
+      --bg:#0b1220; --card:#0f1724; --accent:#0fb5c6; --muted:#9fb0bf; --glass: rgba(255,255,255,0.03);
+      --radius:12px; --maxw:1200px; --ff: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, Arial;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;font-family:var(--ff);background:linear-gradient(180deg,#06101a 0%, #071827 100%);color:#e6eef6;padding:28px;display:flex;justify-content:center;
+      -webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;
+    }
+    .container{width:100%;max-width:var(--maxw)}
+    header{display:flex;align-items:center;justify-content:space-between;gap:12px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#6f4fe5);display:grid;place-items:center;font-weight:800}
+    nav{display:flex;gap:14px;align-items:center}
+    nav a{color:var(--muted);text-decoration:none;font-weight:600}
+    nav a:hover{color:var(--accent)}
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center;margin-top:18px}
+    .hero h1{font-size:clamp(28px,4vw,44px);margin:0 0 12px}
+    .hero p{color:var(--muted);margin:0 0 18px}
+    .btn{background:var(--accent);color:#042029;padding:12px 16px;border-radius:10px;border:0;cursor:pointer;font-weight:700}
+    .btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted)}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:18px;border-radius:var(--radius);box-shadow:0 8px 28px rgba(2,6,23,0.6)}
+    .catalog{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:20px}
+    .product{background:var(--card);padding:14px;border-radius:12px;min-height:160px;display:flex;flex-direction:column;justify-content:space-between;border:1px solid rgba(255,255,255,0.02)}
+    .product h3{margin:0 0 8px}
+    .price{font-weight:800;font-size:18px}
+    .meta{color:var(--muted);font-size:13px}
+    .badge{display:inline-block;padding:6px 8px;border-radius:8px;background:rgba(255,255,255,0.03);font-weight:700;font-size:12px}
+    .filters{display:flex;gap:12px;flex-wrap:wrap;margin-top:12px}
+    .search{flex:1;min-width:200px}
+    .footer{margin-top:36px;padding-top:18px;border-top:1px solid rgba(255,255,255,0.03);color:var(--muted);display:flex;justify-content:space-between;align-items:center}
+    .grid-2{display:grid;grid-template-columns:1fr 380px;gap:18px;margin-top:20px}
+    form label{display:block;font-weight:700;margin-bottom:6px}
+    input,select,textarea{background:transparent;border:1px solid rgba(255,255,255,0.04);padding:10px;border-radius:8px;color:inherit;width:100%}
+    table{width:100%;border-collapse:collapse}
+    th,td{padding:8px;border-bottom:1px solid rgba(255,255,255,0.03);text-align:left}
+    .legal{font-size:13px;color:var(--muted)}
+    @media (max-width:1000px){.hero{grid-template-columns:1fr}.catalog{grid-template-columns:repeat(2,1fr)}.grid-2{grid-template-columns:1fr}}
+    @media (max-width:600px){.catalog{grid-template-columns:1fr}}
+    .pill{padding:6px 10px;border-radius:999px;background:rgba(255,255,255,0.02);font-weight:700}
+    .muted{color:var(--muted)}
+    .center{display:flex;align-items:center;gap:12px}
+    /* small interactions */
+    .product .buy{display:inline-block;margin-top:10px}
+  </style>
+</head>
+<body>
+  <div class="container" role="main">
+    <header>
+      <div class="brand" role="banner">
+        <div class="logo" aria-hidden="true">Ð</div>
+        <div>
+          <div style="font-weight:800">Digital Vault</div>
+          <div class="muted" style="font-size:13px">Claves & Gift Cards — Entrega segura</div>
+        </div>
+      </div>
+      <nav aria-label="Navegación principal">
+        <a href="#catalogo">Catálogo</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contacto">Contacto</a>
+        <a href="#legal" class="btn ghost">Términos</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div>
+        <h1>Claves digitales y tarjetas regalo oficiales — entrega instantánea</h1>
+        <p>Plataforma profesional para comprar claves de juegos, tarjetas de regalo y suscripciones adquiridas legalmente. Pagos seguros, entregas por correo y soporte 24/7.</p>
+
+        <div class="filters">
+          <input class="search" id="search" placeholder="Buscar por título, plataforma o código" aria-label="Buscar productos" />
+          <select id="filterPlatform" aria-label="Filtrar por plataforma">
+            <option value="">Todas las plataformas</option>
+            <option>Steam</option>
+            <option>PSN</option>
+            <option>Xbox</option>
+            <option>Nintendo</option>
+            <option>Gift Card</option>
+          </select>
+          <div class="pill">Entrega instantánea</div>
+          <button class="btn" onclick="applyFilters()">Buscar</button>
+        </div>
+
+        <div id="catalogo" class="catalog" aria-live="polite" aria-label="Catálogo de productos">
+          <!-- Productos generados por JS -->
+        </div>
+      </div>
+
+      <aside class="card" aria-label="Resumen de compra">
+        <h3>Carrito</h3>
+        <div id="cartEmpty" class="muted">No hay artículos en el carrito.</div>
+        <div id="cart" style="display:none">
+          <table id="cartTable" role="table" aria-label="Resumen del carrito">
+            <thead>
+              <tr><th>Artículo</th><th>Precio</th></tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+          <div style="margin-top:12px;display:flex;justify-content:space-between;align-items:center">
+            <div class="muted">Total</div>
+            <div id="cartTotal" style="font-weight:800">0,00 €</div>
+          </div>
+          <div style="margin-top:12px;display:flex;gap:8px">
+            <button class="btn" onclick="checkout()">Pagar</button>
+            <button class="btn ghost" onclick="clearCart()">Vaciar</button>
+          </div>
+          <div style="margin-top:8px" class="muted" id="paymentNote">Integrar pasarela de pagos (Stripe / PayPal / Adyen) para procesar pagos con seguridad.</div>
+        </div>
+
+        <hr style="border:none;border-top:1px solid rgba(255,255,255,0.03);margin:12px 0">
+
+        <h4>¿Por qué elegirnos?</h4>
+        <ul class="muted">
+          <li>Entrega automática por email o área de cliente.</li>
+          <li>Soporte 24/7 y reembolso según política.</li>
+          <li>Control de calidad y claves verificadas.</li>
+        </ul>
+      </aside>
+    </section>
+
+    <section class="grid-2" style="margin-top:28px">
+      <div>
+        <h2 id="faq">Preguntas frecuentes</h2>
+        <dl>
+          <dt style="font-weight:800">¿Las claves son legales?</dt>
+          <dd class="muted">Trabajamos con distribuidores autorizados y proveedores verificados. Siempre mantenemos transparencia en el origen de las claves.</dd>
+
+          <dt style="font-weight:800">¿Cómo recibo el código?</dt>
+          <dd class="muted">Tras la compra la clave se envía por correo y queda disponible en tu área de cliente.</dd>
+
+          <dt style="font-weight:800">¿Qué métodos de pago aceptan?</dt>
+          <dd class="muted">Integramos pasarelas seguras (tarjeta, PayPal, y opciones locales). Recomendamos verificar requisitos legales y KYC en tu jurisdicción.</dd>
+        </dl>
+
+        <h2 id="contacto" style="margin-top:18px">Contacto</h2>
+        <form id="contactForm" onsubmit="submitContact(event)" novalidate>
+          <label for="name">Nombre</label>
+          <input id="name" name="name" placeholder="Tu nombre completo" required />
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" placeholder="tu@correo.com" required />
+          <label for="message">Mensaje</label>
+          <textarea id="message" name="message" placeholder="¿En qué podemos ayudarte?" rows="4"></textarea>
+          <div style="display:flex;gap:8px;margin-top:8px">
+            <button class="btn" type="submit">Enviar mensaje</button>
+            <button class="btn ghost" type="button" onclick="openSupport()">Chat / Soporte</button>
+          </div>
+        </form>
+      </div>
+
+      <aside class="card" id="legal" aria-label="Información legal">
+        <h3>Legal & cumplimiento</h3>
+        <p class="muted">Antes de vender claves o tarjetas asegúrate de contar con proveedores autorizados y cumplir la legislación local. Integra verificación de identidad (KYC) si lo exige tu modelo de negocio.</p>
+
+        <h4 style="margin-top:12px">Política de reembolso</h4>
+        <p class="muted">Las claves abiertas no son reembolsables salvo casos excepcionales. Ofrecemos soporte y reemplazo cuando la clave no funcione.</p>
+
+        <h4 style="margin-top:12px">Integraciones recomendadas</h4>
+        <ul class="muted">
+          <li>Pasarela de pagos: Stripe / Paypal / Adyen</li>
+          <li>Sistema de entrega: emails transaccionales + área de usuario</li>
+          <li>Proveedor de keys verificado</li>
+        </ul>
+      </aside>
+    </section>
+
+    <div class="footer">
+      <div class="muted">© <span id="year"></span> Digital Vault — Todos los derechos reservados , ig mahdi.ffr</div>
+      <div style="display:flex;gap:12px">
+        <a class="muted" href="#legal">Términos</a>
+        <a class="muted" href="#legal">Política de privacidad</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Demo dataset: productos legales (claves, gift cards). Reemplaza con tu API.
+    const PRODUCTS = [
+      { id: 1, title: "Steam Wallet 20€", platform: "Gift Card", price: 17.99, stock: 25, delivery: "Instantánea por email", sku: "GW-STEAM-20" },
+      { id: 2, title: "Game Key — AAA Título (PC)", platform: "Steam", price: 34.50, stock: 10, delivery: "Clave verificada", sku: "GK-AAA-PC" },
+      { id: 3, title: "PSN Card 50€", platform: "Gift Card", price: 46.00, stock: 8, delivery: "Código digital", sku: "GW-PSN-50" },
+      { id: 4, title: "Xbox Game Pass 3 meses", platform: "Xbox", price: 19.99, stock: 100, delivery: "Código inmediato", sku: "SUB-XGP-3M" },
+      { id: 5, title: "Nintendo eShop 25€", platform: "Gift Card", price: 22.00, stock: 5, delivery: "Entrega por email", sku: "GW-NINT-25" },
+      { id: 6, title: "Key — Indie Bundle (PC)", platform: "Steam", price: 9.99, stock: 40, delivery: "Clave verificada", sku: "GK-INDIE-B" }
+    ];
+
+    // Simple cart (in-memory). Replace with backend/session for producción.
+    const cart = [];
+
+    function formatPrice(v){ return v.toLocaleString('es-ES', {minimumFractionDigits:2, maximumFractionDigits:2}) + ' €'; }
+
+    function renderCatalog(list){
+      const container = document.getElementById('catalogo');
+      container.innerHTML = '';
+      list.forEach(p=>{
+        const div = document.createElement('div');
+        div.className = 'product card';
+        div.innerHTML = `
+          <div>
+            <div style="display:flex;justify-content:space-between;align-items:center">
+              <h3>${escapeHtml(p.title)}</h3>
+              <div class="badge">${escapeHtml(p.platform)}</div>
+            </div>
+            <div class="meta">${escapeHtml(p.delivery)}</div>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <div>
+              <div class="price">${formatPrice(p.price)}</div>
+              <div class="muted" style="font-size:13px">Stock: ${p.stock}</div>
+            </div>
+            <div>
+              <button class="btn buy" onclick="addToCart(${p.id})" ${p.stock<=0? 'disabled' : ''}>Comprar</button>
+              <button class="btn ghost" onclick="viewDetails(${p.id})">Detalles</button>
+            </div>
+          </div>
+        `;
+        container.appendChild(div);
+      });
+    }
+
+    function escapeHtml(s){ return String(s).replace(/[&<>"']/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
+
+    function addToCart(id){
+      const prod = PRODUCTS.find(p=>p.id===id);
+      if(!prod || prod.stock<=0) { alert('Producto no disponible'); return;}
+      cart.push({id:prod.id, title:prod.title, price:prod.price});
+      updateCartUI();
+    }
+
+    function updateCartUI(){
+      const cartDiv = document.getElementById('cart');
+      const cartEmpty = document.getElementById('cartEmpty');
+      if(cart.length===0){ cartDiv.style.display='none'; cartEmpty.style.display='block'; return; }
+      cartDiv.style.display='block'; cartEmpty.style.display='none';
+      const tbody = document.querySelector('#cartTable tbody');
+      tbody.innerHTML = '';
+      let total = 0;
+      cart.forEach(item=>{
+        const tr = document.createElement('tr');
+        tr.innerHTML = `<td>${escapeHtml(item.title)}</td><td>${formatPrice(item.price)}</td>`;
+        tbody.appendChild(tr);
+        total += item.price;
+      });
+      document.getElementById('cartTotal').textContent = formatPrice(total);
+    }
+
+    function clearCart(){ if(confirm('Vaciar carrito?')){ cart.length=0; updateCartUI(); } }
+
+    function checkout(){
+      if(cart.length===0){ alert('El carrito está vacío.'); return; }
+      // Aviso: aquí debes integrar tu pasarela de pagos y flujo seguro.
+      alert('Simulación de checkout: redirigir a pasarela de pago y procesar pedido.\n\n(En producción conecta Stripe/PayPal y tu backend)');
+    }
+
+    function applyFilters(){
+      const q = document.getElementById('search').value.trim().toLowerCase();
+      const platform = document.getElementById('filterPlatform').value;
+      const filtered = PRODUCTS.filter(p=>{
+        return (!platform || p.platform === platform) && (!q || (p.title.toLowerCase().includes(q) || p.platform.toLowerCase().includes(q) || p.sku.toLowerCase().includes(q)));
+      });
+      renderCatalog(filtered);
+    }
+
+    function viewDetails(id){
+      const p = PRODUCTS.find(x=>x.id===id);
+      if(!p) return;
+      alert(`${p.title}\\n\\nPlataforma: ${p.platform}\\nPrecio: ${formatPrice(p.price)}\\nEntrega: ${p.delivery}\\nSKU: ${p.sku}\\n\\nEn producción muestra un modal con términos y botón de compra seguro.`);
+    }
+
+    // Contact form demo
+    function submitContact(e){
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      if(!name || !email){ alert('Completa nombre y email.'); return; }
+      // En producción: enviar a backend / CRM / ticket
+      alert('Gracias ' + name + '. Hemos recibido tu mensaje y te responderemos pronto.');
+      e.target.reset();
+    }
+
+    function openSupport(){ alert('Abrir chat en vivo o integración con widget de soporte (Intercom, Tawk.to, Freshdesk).'); }
+
+    // Inicialización
+    document.getElementById('year').textContent = new Date().getFullYear();
+    renderCatalog(PRODUCTS);
+    updateCartUI();
+  </script>
+</body>
+</html>
